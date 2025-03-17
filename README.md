@@ -36,7 +36,45 @@ npm install
 npm start
 ```
 
-4. Open your browser and navigate to `http://localhost:9000`
+4. Open your browser and navigate to `http://localhost:9001`
+
+### Deployment to GitHub Pages
+
+This project is configured for easy deployment to GitHub Pages.
+
+1. **Set up GitHub Pages permissions**:
+   - Go to your repository Settings
+   - Navigate to "Actions" under "Code and automation"
+   - Set "Workflow permissions" to "Read and write permissions"
+   - Save changes
+
+2. **Enable GitHub Pages**:
+   - Go to your repository Settings
+   - Navigate to "Pages" under "Code and automation"
+   - Under "Build and deployment", select "GitHub Actions" as the source
+
+3. Push your changes to the master branch
+```bash
+git add .
+git commit -m "Your commit message"
+git push origin master
+```
+
+4. The GitHub Actions workflow will automatically build and deploy your project to GitHub Pages.
+
+5. Alternatively, you can manually build and deploy:
+```bash
+# Build for production
+npm run build:prod
+
+# Copy public files to dist folder
+cp -r public/* dist/
+
+# Deploy the dist folder to GitHub Pages
+# (You can use gh-pages package or manually push to the gh-pages branch)
+```
+
+6. Your project will be available at `https://yourusername.github.io/TypeCraft/`
 
 ## Controls
 

@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  mode: 'development',
+  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   entry: './src/index.ts',
   module: {
     rules: [
@@ -18,7 +18,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
+    publicPath: './',
   },
   devServer: {
     static: {
@@ -32,6 +32,9 @@ module.exports = {
     client: {
       webSocketURL: 'auto://0.0.0.0:0/ws',
       overlay: true,
+    },
+    devMiddleware: {
+      publicPath: '/',
     },
   },
 }; 
