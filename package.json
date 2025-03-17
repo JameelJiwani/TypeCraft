@@ -1,0 +1,32 @@
+{
+  "name": "minecraftts",
+  "version": "1.0.0",
+  "description": "A Minecraft clone built with TypeScript and Three.js",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack serve --open",
+    "dev": "webpack --watch"
+  },
+  "keywords": [
+    "minecraft",
+    "voxel",
+    "threejs",
+    "typescript",
+    "game"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/three": "^0.174.0",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.8.2",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
+  },
+  "dependencies": {
+    "simplex-noise": "^4.0.3",
+    "three": "^0.174.0"
+  }
+}
