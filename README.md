@@ -74,7 +74,7 @@ cp -r public/* dist/
 # (You can use gh-pages package or manually push to the gh-pages branch)
 ```
 
-6. Your project will be available at `https://yourusername.github.io/TypeCraft/`
+6. Your project will be available at `https://jameeljiwani.github.io/TypeCraft/`
 
 ## Controls
 
